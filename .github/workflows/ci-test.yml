@@ -159,7 +159,7 @@ jobs:
           pattern: '^api\|^scripts/dev_setup.sh'
 
   dev-setup-sh-test:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, testnet-runner-ubuntu]
     timeout-minutes: 65
     needs: prepare
     if: ${{ needs.prepare.outputs.test-dev-setup == 'true' }}
@@ -180,7 +180,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
   build-images:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, testnet-runner-ubuntu]
     timeout-minutes: 65
     needs: prepare
     if: ${{ github.event_name == 'push' && needs.prepare.outputs.build-images == 'true' }}
@@ -663,7 +663,7 @@ jobs:
           cargo test -p testcases --test forge-local-compatibility
 
   docker-compose-test:
-    runs-on: ubuntu-20.04
+    runs-on: [self-hosted, testnet-runner-ubuntu]
     timeout-minutes: 65
     needs: [prepare, lint]
     if: ${{ always() && needs.prepare.outputs.test-docker-compose == 'true' }}
@@ -857,7 +857,7 @@ jobs:
   # Compile (but don't run) the benchmarks, to insulate against bit rot
   build-benchmarks:
     runs-on: [self-hosted, testnet-runner]
-    timeout-minutes: 30
+    timeout-minutes: 60
     needs: [prepare, lint]
     if: ${{ always() && needs.prepare.outputs.test-rust == 'true' }}
     container:
