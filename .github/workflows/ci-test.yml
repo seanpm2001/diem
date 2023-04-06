@@ -483,6 +483,7 @@ jobs:
     timeout-minutes: 120
     needs: prepare
     if: ${{ needs.prepare.outputs.test-rust == 'true' }}
+    
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
@@ -555,8 +556,8 @@ jobs:
   e2e-test:
     runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 70
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' }}
+    needs: [prepare, lint]
+    if: ${{  always() && needs.prepare.outputs.test-rust == 'true' }}
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
@@ -645,8 +646,8 @@ jobs:
   forge-test:
     runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 120
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' && needs.prepare.outputs.test-compatibility == 'true' }}
+    needs: [prepare, lint]
+    if: ${{ always() && needs.prepare.outputs.test-rust == 'true' && needs.prepare.outputs.test-compatibility == 'true' }}
     container:
       image: diem/build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
@@ -665,8 +666,8 @@ jobs:
   docker-compose-test:
     runs-on: ubuntu-20.04
     timeout-minutes: 65
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-docker-compose == 'true' }}
+    needs: [prepare, lint]
+    if: ${{ always() && needs.prepare.outputs.test-docker-compose == 'true' }}
     steps:
       - uses: actions/checkout@v2.4.0
         with:
@@ -701,8 +702,8 @@ jobs:
   crypto-unit-test:
     runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 65
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' }}
+    needs: [prepare, lint]
+    if: ${{ always() && needs.prepare.outputs.test-rust == 'true' }}
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
@@ -858,8 +859,8 @@ jobs:
   build-benchmarks:
     runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 30
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' }}
+    needs: [prepare, lint]
+    if: ${{ always() && needs.prepare.outputs.test-rust == 'true' }}
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
@@ -887,8 +888,8 @@ jobs:
   build-dev:
     runs-on: [self-hosted, testnet-runner]
     timeout-minutes: 65
-    needs: prepare
-    if: ${{ needs.prepare.outputs.test-rust == 'true' }}
+    needs: [prepare, lint]
+    if: ${{ always() && needs.prepare.outputs.test-rust == 'true' }}
     container:
       image: ghcr.io/diem/diem_build_environment:${{ needs.prepare.outputs.changes-target-branch }}
       volumes:
