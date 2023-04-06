@@ -729,7 +729,7 @@ jobs:
 
   # Disabling temporarily since code coverage is currently broken with the latest rust release
   # coverage-unit-test:
-  #   runs-on: ubuntu-20.04-xl
+  #   runs-on: ubuntu-latest
   #   timeout-minutes: 30
   #   needs: prepare
   #   if: ${{ needs.prepare.outputs.test-test-coverage == 'true' }}
