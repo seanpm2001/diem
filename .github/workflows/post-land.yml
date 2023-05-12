@@ -1,9 +1,10 @@
 name: ci-post-land
 
 on:
+  create:
+    branches: [main, release-1.1-rc]
   push:
-    branches: [ harisharavindan-patch-1 ] # "gha-test-*"
-
+    branches: [ release-1.1-rc ] # "gha-test-*"
 defaults:
   run:
     shell: bash
