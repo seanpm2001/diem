@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["EMPTY_COMPILER","PASS_CFGIR","PASS_COMPILATION","PASS_EXPANSION","PASS_HLIR","PASS_NAMING","PASS_PARSER","PASS_TYPING"],"fn":["construct_pre_compiled_lib","generate_interface_files","output_compiled_units","sanity_check_compiled_units"],"struct":["Compiler","FullyCompiledProgram","SteppedCompiler"],"type":["Pass"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Def"],"fn":["format_reaching_def_annotation"],"struct":["ReachingDefAnnotation","ReachingDefProcessor"]};

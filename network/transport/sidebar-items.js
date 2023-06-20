@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DIEM_TCP_TRANSPORT","SUPPORTED_MESSAGING_PROTOCOL","TRANSPORT_TIMEOUT"],"fn":["upgrade_outbound"],"struct":["Connection","ConnectionId","ConnectionMetadata","DiemNetTransport","UpgradeContext"],"trait":["TSocket"]};

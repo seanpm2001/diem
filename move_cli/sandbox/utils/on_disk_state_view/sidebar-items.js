@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["EVENTS_DIR","MODULES_DIR","RESOURCES_DIR","STRUCT_LAYOUTS_DIR"],"struct":["OnDiskStateView"],"type":["ModuleIdWithNamedAddress"]};

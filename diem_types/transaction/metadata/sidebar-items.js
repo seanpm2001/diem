@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["CoinTradeMetadata","GeneralMetadata","Metadata","PaymentMetadata","RefundMetadata","RefundReason","TravelRuleMetadata"],"struct":["CoinTradeMetadataV0","GeneralMetadataV0","PaymentMetadataV0","RefundMetadataV0","TravelRuleMetadataV0","UnstructuredBytesMetadata"]};

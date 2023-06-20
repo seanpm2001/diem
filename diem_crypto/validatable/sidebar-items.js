@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["UnvalidatedEd25519PublicKey","Validatable"],"trait":["Validate"]};

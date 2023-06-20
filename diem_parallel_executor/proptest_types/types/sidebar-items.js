@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ExpectedOutput","Transaction"],"struct":["ImpreciseInferencer","Inferencer","Output","Task","TransactionGen","TransactionGenParams"]};

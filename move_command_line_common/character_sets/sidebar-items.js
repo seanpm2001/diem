@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["is_permitted_char","is_permitted_newline_char","is_permitted_printable_char"]};

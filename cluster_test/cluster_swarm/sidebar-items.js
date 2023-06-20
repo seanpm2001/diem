@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["cluster_swarm_kube"],"trait":["ClusterSwarm"]};

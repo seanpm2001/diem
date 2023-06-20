@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ErrorKind"],"macro":["anyhow","bail","format_err"],"struct":["Error"],"type":["Result"]};

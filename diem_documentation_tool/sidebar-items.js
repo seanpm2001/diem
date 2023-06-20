@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["quote_container_definitions","update_rust_quotes"]};

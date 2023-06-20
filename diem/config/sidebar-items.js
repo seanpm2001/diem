@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ConfigTool"],"mod":["init_config"]};

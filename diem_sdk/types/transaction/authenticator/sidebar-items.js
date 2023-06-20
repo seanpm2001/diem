@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MAX_NUM_OF_SIGS"],"enum":["AccountAuthenticator","AuthenticationError","Scheme","TransactionAuthenticator"],"struct":["AuthenticationKey","AuthenticationKeyHasher","AuthenticationKeyPreimage"]};

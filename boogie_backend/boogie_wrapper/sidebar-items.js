@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["BoogieErrorKind","ModelValue","TraceEntry"],"struct":["BoogieError","BoogieOutput","BoogieWrapper","Model","ModelValueVector"]};

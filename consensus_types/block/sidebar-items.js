@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["block_test_utils"],"struct":["Block"]};

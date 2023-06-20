@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MatchError","MatchStatus"],"fn":["match_output"],"struct":["Match","MatchResult"]};

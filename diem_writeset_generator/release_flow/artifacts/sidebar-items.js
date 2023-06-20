@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["get_commit_hash","hash_for_modules","load_latest_artifact","save_release_artifact"],"struct":["ReleaseArtifact"]};

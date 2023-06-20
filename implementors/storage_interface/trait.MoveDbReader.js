@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"diemdb":[["impl <a class=\"trait\" href=\"storage_interface/trait.MoveDbReader.html\" title=\"trait storage_interface::MoveDbReader\">MoveDbReader</a> for <a class=\"struct\" href=\"diemdb/struct.DiemDB.html\" title=\"struct diemdb::DiemDB\">DiemDB</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

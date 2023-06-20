@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Effects"],"fn":["instruction_summary"],"struct":["Summary"],"type":["FunctionInstantiableEffect","InstantiableEffect","NonInstantiableEffect","Precondition"]};

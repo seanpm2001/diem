@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["LedgerInfoWithSignatures"],"struct":["LedgerInfo","LedgerInfoHasher","LedgerInfoWithV0"]};

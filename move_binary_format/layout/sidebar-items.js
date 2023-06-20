@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["StructLayoutBuilder","TypeLayoutBuilder"],"struct":["ModuleCache"],"trait":["GetModule"]};

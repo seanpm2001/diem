@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["VASP_DOMAIN_MODULE_IDENTIFIER"],"struct":["VASPDomain","VASPDomainEvent","VASPDomainManager","VASPDomains"]};

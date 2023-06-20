@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"macro":["ident_str"],"mod":["abi","account_address","effects","errmap","gas_schedule","identifier","language_storage","move_resource","parser","proptest_types","resolver","transaction_argument","value","vm_status"]};

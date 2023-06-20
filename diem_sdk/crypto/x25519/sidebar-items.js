@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["PRIVATE_KEY_SIZE","PUBLIC_KEY_SIZE","SHARED_SECRET_SIZE"],"fn":["keypair_strategy"],"mod":["x25519_dalek"],"struct":["PrivateKey","PublicKey"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["PointerKind"],"static":["VALID_POINTER_SRCS"],"struct":["ApplyCodeUnitBoundsContext","ApplyOutOfBoundsContext","CodeUnitBoundsMutation","OutOfBoundsMutation"]};

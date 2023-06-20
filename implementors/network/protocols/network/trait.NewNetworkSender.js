@@ -1,0 +1,7 @@
+(function() {var implementors = {
+"consensus":[["impl <a class=\"trait\" href=\"network/protocols/network/trait.NewNetworkSender.html\" title=\"trait network::protocols::network::NewNetworkSender\">NewNetworkSender</a> for <a class=\"struct\" href=\"consensus/network_interface/struct.ConsensusNetworkSender.html\" title=\"struct consensus::network_interface::ConsensusNetworkSender\">ConsensusNetworkSender</a>"]],
+"diem_mempool":[["impl NewNetworkSender for <a class=\"struct\" href=\"diem_mempool/network/struct.MempoolNetworkSender.html\" title=\"struct diem_mempool::network::MempoolNetworkSender\">MempoolNetworkSender</a>"]],
+"network":[],
+"network_builder":[["impl NewNetworkSender for <a class=\"struct\" href=\"network_builder/dummy/struct.DummyNetworkSender.html\" title=\"struct network_builder::dummy::DummyNetworkSender\">DummyNetworkSender</a>"]],
+"state_sync_v1":[["impl <a class=\"trait\" href=\"network/protocols/network/trait.NewNetworkSender.html\" title=\"trait network::protocols::network::NewNetworkSender\">NewNetworkSender</a> for <a class=\"struct\" href=\"state_sync_v1/network/struct.StateSyncSender.html\" title=\"struct state_sync_v1::network::StateSyncSender\">StateSyncSender</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

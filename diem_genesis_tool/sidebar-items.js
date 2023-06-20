@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["builder","command","config_builder","fullnode_builder","layout","validator_builder"]};

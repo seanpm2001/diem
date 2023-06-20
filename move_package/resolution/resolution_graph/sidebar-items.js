@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["ResolutionGraph","ResolutionPackage","ResolvingNamedAddress"],"type":["GraphIndex","Renaming","ResolvedGraph","ResolvedPackage","ResolvedTable"]};

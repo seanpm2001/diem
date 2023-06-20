@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"diem":[["impl Args for <a class=\"struct\" href=\"diem/account/mint/struct.MintAccount.html\" title=\"struct diem::account::mint::MintAccount\">MintAccount</a>"],["impl Args for <a class=\"struct\" href=\"diem/config/init_config/struct.InitConfig.html\" title=\"struct diem::config::init_config::InitConfig\">InitConfig</a>"],["impl Args for <a class=\"struct\" href=\"diem/account/create_account/struct.CreateAccount.html\" title=\"struct diem::account::create_account::CreateAccount\">CreateAccount</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["test_save_blocks_impl"],"mod":["backup","diemsum","errors","metrics","schema","test_helper"],"struct":["DiemDB"],"trait":["GetRestoreHandler"]};

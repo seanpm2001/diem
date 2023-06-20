@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["client","crypto","move_types","transaction_builder","types"]};

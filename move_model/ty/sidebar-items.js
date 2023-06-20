@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BOOL_TYPE","NUM_TYPE"],"enum":["PrimitiveType","Type","TypeDisplayContext","TypeUnificationError","Variance"],"struct":["Substitution","TypeDisplay","TypeInstantiationDerivation","TypeUnificationAdapter"]};

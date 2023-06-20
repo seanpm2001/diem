@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["exp_retry_strategy","fixed_retry_strategy","retry","retry_async"],"struct":["ExponentWithLimitDelay","FixedDelay"]};

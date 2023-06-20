@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["character_sets","env","files","testing"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Addr","Offset","Root"],"struct":["AbsAddrDisplay","AbsStructType","AbsStructTypeDisplay","AccessPath","AccessPathDisplay","AddrDisplay","GlobalKey","GlobalKeyDisplay","OffsetDisplay","RootDisplay"],"trait":["AccessPathMap","FootprintDomain"],"type":["AbsAddr"]};

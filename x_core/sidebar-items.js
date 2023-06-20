@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SystemError","WorkspaceStatus"],"mod":["core_config","git"],"struct":["DebugIgnore","WorkspaceSubset","WorkspaceSubsets","XCoreContext"],"type":["Result"]};

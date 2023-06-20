@@ -1,0 +1,3 @@
+(function() {var implementors = {
+"diem_logger":[["impl&lt;S: <a class=\"trait\" href=\"https://docs.rs/tracing-core/0.1.22/tracing_core/subscriber/trait.Subscriber.html\" title=\"trait tracing_core::subscriber::Subscriber\">Subscriber</a>&gt; <a class=\"trait\" href=\"https://docs.rs/tracing-subscriber/0.2.25/tracing_subscriber/layer/trait.Layer.html\" title=\"trait tracing_subscriber::layer::Layer\">Layer</a>&lt;S&gt; for <a class=\"struct\" href=\"diem_logger/tracing_adapter/struct.TracingToDiemLoggerLayer.html\" title=\"struct diem_logger::tracing_adapter::TracingToDiemLoggerLayer\">TracingToDiemLoggerLayer</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["BACKEND","DISK","GITHUB","MEMORY","VAULT"],"struct":["SecureBackend","SharedBackend","ValidatorBackend"]};

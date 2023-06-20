@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["parse_module","parse_script","parse_script_or_module"]};

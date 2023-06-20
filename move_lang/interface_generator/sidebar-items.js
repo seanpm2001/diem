@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["write_file_to_string","write_module_to_string"]};

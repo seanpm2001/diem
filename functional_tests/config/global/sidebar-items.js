@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Entry","Role"],"struct":["AccountDefinition","Balance","Config"]};

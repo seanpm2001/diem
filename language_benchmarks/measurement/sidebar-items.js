@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["cpu_time_measurement","wall_time_measurement"]};

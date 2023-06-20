@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AnnotatedMoveValue"],"struct":["AnnotatedAccountStateBlob","AnnotatedMoveStruct","DiemValueAnnotator"]};

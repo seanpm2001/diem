@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["StatusCode"],"fn":["native_gas"],"struct":["NativeResult","PartialVMError"],"type":["PartialVMResult"]};

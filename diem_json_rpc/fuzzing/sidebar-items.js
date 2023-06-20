@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["fuzzer","generate_corpus","method_fuzzer","request_fuzzer"]};

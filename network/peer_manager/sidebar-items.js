@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ConnectionNotification","ConnectionRequest","PeerManagerError","PeerManagerNotification","PeerManagerRequest","TransportNotification"],"mod":["builder","conn_notifs_channel"],"struct":["ConnectionRequestSender","PeerManager","PeerManagerRequestSender"],"type":["IpAddrTokenBucketLimiter"]};

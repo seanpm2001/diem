@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["CFG_SEED"],"struct":["ClusterSwarmKube","KubeNode"]};

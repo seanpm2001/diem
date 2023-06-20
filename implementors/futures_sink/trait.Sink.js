@@ -1,0 +1,4 @@
+(function() {var implementors = {
+"channel":[["impl&lt;T&gt; Sink&lt;T&gt; for <a class=\"struct\" href=\"channel/struct.Sender.html\" title=\"struct channel::Sender\">Sender</a>&lt;T&gt;"]],
+"network":[["impl&lt;TWriteSocket: AsyncWrite&gt; Sink&lt;&amp;<a class=\"enum\" href=\"network/protocols/wire/messaging/v1/enum.NetworkMessage.html\" title=\"enum network::protocols::wire::messaging::v1::NetworkMessage\">NetworkMessage</a>&gt; for <a class=\"struct\" href=\"network/protocols/wire/messaging/v1/struct.NetworkMessageSink.html\" title=\"struct network::protocols::wire::messaging::v1::NetworkMessageSink\">NetworkMessageSink</a>&lt;TWriteSocket&gt;"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

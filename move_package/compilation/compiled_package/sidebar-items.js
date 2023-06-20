@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["CompiledPackage","CompiledPackageInfo","OnDiskCompiledPackage"],"type":["ModuleResolutionMetadata"]};

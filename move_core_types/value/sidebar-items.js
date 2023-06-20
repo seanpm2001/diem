@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["MoveStruct","MoveStructLayout","MoveTypeLayout","MoveValue"],"fn":["serialize_values"],"struct":["MoveFieldLayout"]};

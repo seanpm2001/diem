@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Argument","Entry"],"fn":["is_new_transaction"],"struct":["Config"]};

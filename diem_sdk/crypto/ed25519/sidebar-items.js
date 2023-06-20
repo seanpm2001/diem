@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ED25519_PRIVATE_KEY_LENGTH","ED25519_PUBLIC_KEY_LENGTH","ED25519_SIGNATURE_LENGTH"],"fn":["keypair_strategy"],"mod":["ed25519_dalek"],"struct":["Ed25519PrivateKey","Ed25519PublicKey","Ed25519Signature"]};

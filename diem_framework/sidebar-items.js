@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["COMPILED_OUTPUT_PATH"],"fn":["diem_framework_named_addresses","diem_stdlib_files","diem_stdlib_files_no_dependencies","diem_stdlib_modules_full_path","module_blobs","modules","path_in_crate","stdlib_bytecode_files"],"mod":["natives","release"]};

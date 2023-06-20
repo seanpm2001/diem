@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SyntaxChoice","TaskCommand"],"fn":["taskify"],"struct":["EmptyCommand","InitCommand","PublishCommand","RunCommand","TaskInput","ViewCommand"]};

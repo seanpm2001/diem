@@ -1,0 +1,4 @@
+(function() {var implementors = {
+"diem_vm":[["impl&lt;'a, S: StateView&gt; ConfigStorage for <a class=\"struct\" href=\"diem_vm/data_cache/struct.RemoteStorage.html\" title=\"struct diem_vm::data_cache::RemoteStorage\">RemoteStorage</a>&lt;'a, S&gt;"],["impl&lt;'block&gt; ConfigStorage for <a class=\"struct\" href=\"diem_vm/data_cache/struct.StateViewCache.html\" title=\"struct diem_vm::data_cache::StateViewCache\">StateViewCache</a>&lt;'block&gt;"]],
+"language_e2e_tests":[["impl <a class=\"trait\" href=\"diem_types/on_chain_config/trait.ConfigStorage.html\" title=\"trait diem_types::on_chain_config::ConfigStorage\">ConfigStorage</a> for <a class=\"struct\" href=\"language_e2e_tests/data_store/struct.FakeDataStore.html\" title=\"struct language_e2e_tests::data_store::FakeDataStore\">FakeDataStore</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

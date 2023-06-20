@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SubstOrRename"],"struct":["BuildInfo","Dependency","PackageInfo","SourceManifest"],"type":["AddressDeclarations","Dependencies","DevAddressDeclarations","FileName","NamedAddress","PackageName","Substitution","Version"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["MEMPOOL_DIRECT_SEND_PROTOCOL"],"enum":["MempoolSyncMsg"],"fn":["network_endpoint_config"],"struct":["MempoolNetworkSender"],"type":["MempoolNetworkEvents"]};

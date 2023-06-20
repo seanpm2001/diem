@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["AccountStatus"],"fn":["create_new_default_account","generate_key_pair","mint_new_account","prompt_user","save_keypair","to_common_result"],"struct":["AccountData","GenerateKeypairResponse"]};

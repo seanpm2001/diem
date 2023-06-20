@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["is_valid","is_valid_identifier_char"],"macro":["ident_str"],"struct":["IdentStr","Identifier"]};

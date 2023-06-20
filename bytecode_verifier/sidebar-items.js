@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["ability_field_requirements","check_duplication","code_unit_verifier","constants","control_flow","cyclic_dependencies","dependencies","friends","instantiation_loops","instruction_consistency","script_signature","signature","struct_defs","verifier"]};

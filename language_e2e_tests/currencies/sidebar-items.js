@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["add_currency_to_system"]};

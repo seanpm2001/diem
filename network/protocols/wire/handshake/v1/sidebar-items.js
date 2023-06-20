@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["HandshakeError","MessagingProtocolVersion","ProtocolId"],"struct":["HandshakeMsg","SupportedProtocols"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["network_endpoint_config","setup_network"],"struct":["DummyMsg","DummyNetwork","DummyNetworkSender"],"type":["DummyNetworkEvents"]};

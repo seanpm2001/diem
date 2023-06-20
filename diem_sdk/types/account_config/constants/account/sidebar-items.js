@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["ACCOUNT_MODULE_IDENTIFIER"],"static":["ACCOUNT_MODULE"]};

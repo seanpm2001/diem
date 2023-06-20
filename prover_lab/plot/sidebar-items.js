@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["COLOR_PALETTE","DARK_GRAY","GRAY","GRAY_PALETTE","LIGHT_GRAY","MEDIUM_GRAY"],"fn":["plot_benchmarks_to_file","plot_svg"]};

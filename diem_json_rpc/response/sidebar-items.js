@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["X_DIEM_CHAIN_ID","X_DIEM_TIMESTAMP_USEC_ID","X_DIEM_VERSION_ID"],"struct":["JsonRpcResponse"]};

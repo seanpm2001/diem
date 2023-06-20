@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["current_error_descriptions","current_module_blobs","current_modules","current_modules_with_blobs","list_all_releases","load_error_descriptions_from_release","load_modules_from_release","name_for_script"],"mod":["legacy"]};

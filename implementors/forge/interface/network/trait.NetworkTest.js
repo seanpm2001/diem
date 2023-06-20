@@ -1,0 +1,4 @@
+(function() {var implementors = {
+"smoke_test":[["impl NetworkTest for <a class=\"struct\" href=\"smoke_test/fullnode/struct.LaunchFullnode.html\" title=\"struct smoke_test::fullnode::LaunchFullnode\">LaunchFullnode</a>"]],
+"testcases":[["impl NetworkTest for <a class=\"struct\" href=\"testcases/performance_test/struct.PerformanceBenchmark.html\" title=\"struct testcases::performance_test::PerformanceBenchmark\">PerformanceBenchmark</a>"],["impl NetworkTest for <a class=\"struct\" href=\"testcases/compatibility_test/struct.SimpleValidatorUpgrade.html\" title=\"struct testcases::compatibility_test::SimpleValidatorUpgrade\">SimpleValidatorUpgrade</a>"]]
+};if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

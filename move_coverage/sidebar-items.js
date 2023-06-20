@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["coverage_map","source_coverage","summary"]};

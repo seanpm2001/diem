@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["ErrorData","InvalidRequestCode","ServerCode"],"fn":["is_internal_error"],"static":["INTERNAL_ERRORS"],"struct":["JsonRpcError"]};

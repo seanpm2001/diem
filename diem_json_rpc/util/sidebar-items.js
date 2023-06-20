@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["SdkLang"],"fn":["sdk_info_from_user_agent"],"struct":["SdkInfo","SdkVersion"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["Command","ResultWrapper"],"fn":["pretty_print"],"struct":["Args","AssetsProof","BalancesView","ChildVASPView","CollectOptions","CommonOptions","ParentVASPView","SimpleCurrencyView","SimpleMetadataView"],"trait":["Client"]};

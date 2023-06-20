@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["RestoreRunMode"],"mod":["backup_service_client","read_record_bytes","storage_ext"],"struct":["ConcurrentDownloadsOpt","GlobalBackupOpt","GlobalRestoreOpt","GlobalRestoreOptions","RocksdbOpt","TrustedWaypointOpt"]};

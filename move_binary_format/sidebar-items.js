@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["IndexKind","SignatureTokenKind"],"mod":["access","binary_views","check_bounds","compatibility","constant","control_flow_graph","deserializer","errors","file_format","file_format_common","internals","layout","normalized","proptest_types","serializer","views"]};

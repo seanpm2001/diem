@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"struct":["FieldDefinitionView","FieldHandleView","FieldInstantiationView","FunctionDefinitionView","FunctionHandleView","FunctionInstantiationView","LocalsSignatureView","ModuleHandleView","ModuleView","SignatureTokenView","SignatureView","StructDefinitionView","StructHandleView","StructInstantiationView","TypeSignatureView"],"trait":["ViewInternals"]};

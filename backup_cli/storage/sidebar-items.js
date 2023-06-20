@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["StorageOpt"],"mod":["command_adapter","local_fs"],"struct":["ShellSafeName","TextLine"],"trait":["BackupStorage"],"type":["BackupHandle","BackupHandleRef","FileHandle","FileHandleRef"]};

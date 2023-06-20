@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Trait that is implemented by a DB that supports certain public (to client) read APIs expected of a Diem DB"><title>DbReader in storage_interface - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceSerif4-Regular-46f98efaafac5295.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Regular-018c141bf0843ffd.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/FiraSans-Medium-8f9a781e4970d388.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Regular-562dcc5011b6de7d.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceSerif4-Bold-a2c9cd1067f8b328.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../static.files/SourceCodePro-Semibold-d899c5a5c4aeb14a.ttf.woff2"><link rel="stylesheet" href="../static.files/normalize-76eba96aa4d2e634.css"><link rel="stylesheet" href="../static.files/rustdoc-c4dbdcde0fbd8430.css" id="mainThemeStyle"><link rel="stylesheet" id="themeStyle" href="../static.files/light-db279b6232be9c13.css"><link rel="stylesheet" disabled href="../static.files/dark-cf923f49f397b216.css"><link rel="stylesheet" disabled href="../static.files/ayu-be46fdc453a55015.css"><script src="../static.files/storage-3891ce972e3a2bf8.js"></script><script defer src="sidebar-items.js"></script><script defer src="../static.files/main-98a684e84ae5b08b.js"></script><noscript><link rel="stylesheet" href="../static.files/noscript-13285aec31fa243e.css"></noscript><link rel="alternate icon" type="image/png" href="../static.files/favicon-16x16-8b506e7a72182f1c.png"><link rel="alternate icon" type="image/png" href="../static.files/favicon-32x32-422f7d1d52889060.png"><link rel="icon" type="image/svg+xml" href="../static.files/favicon-2c020d218678b618.svg"></head><body class="rustdoc trait"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="logo-container" href="../storage_interface/index.html"><img class="rust-logo" src="../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2></h2></nav><nav class="sidebar"><a class="logo-container" href="../storage_interface/index.html"><img class="rust-logo" src="../static.files/rust-logo-151179464ae7ed46.svg" alt="logo"></a><h2 class="location"><a href="#">DbReader</a></h2><div class="sidebar-elems"><section><h3><a href="#required-methods">Required Methods</a></h3><ul class="block"><li><a href="#tymethod.get_account_state_with_proof">get_account_state_with_proof</a></li><li><a href="#tymethod.get_account_state_with_proof_by_version">get_account_state_with_proof_by_version</a></li><li><a href="#tymethod.get_account_transaction">get_account_transaction</a></li><li><a href="#tymethod.get_account_transactions">get_account_transactions</a></li><li><a href="#tymethod.get_block_timestamp">get_block_timestamp</a></li><li><a href="#tymethod.get_epoch_ending_ledger_info">get_epoch_ending_ledger_info</a></li><li><a href="#tymethod.get_epoch_ending_ledger_infos">get_epoch_ending_ledger_infos</a></li><li><a href="#tymethod.get_event_by_version_with_proof">get_event_by_version_with_proof</a></li><li><a href="#tymethod.get_events">get_events</a></li><li><a href="#tymethod.get_events_with_proofs">get_events_with_proofs</a></li><li><a href="#tymethod.get_latest_account_state">get_latest_account_state</a></li><li><a href="#tymethod.get_latest_ledger_info">get_latest_ledger_info</a></li><li><a href="#tymethod.get_latest_state_root">get_latest_state_root</a></li><li><a href="#tymethod.get_latest_tree_state">get_latest_tree_state</a></li><li><a href="#tymethod.get_startup_info">get_startup_info</a></li><li><a href="#tymethod.get_state_proof">get_state_proof</a></li><li><a href="#tymethod.get_state_proof_with_ledger_info">get_state_proof_with_ledger_info</a></li><li><a href="#tymethod.get_transactions">get_transactions</a></li></ul><h3><a href="#provided-methods">Provided Methods</a></h3><ul class="block"><li><a href="#method.get_accumulator_consistency_proof">get_accumulator_consistency_proof</a></li><li><a href="#method.get_accumulator_root_hash">get_accumulator_root_hash</a></li><li><a href="#method.get_accumulator_summary">get_accumulator_summary</a></li><li><a href="#method.get_last_version_before_timestamp">get_last_version_before_timestamp</a></li><li><a href="#method.get_latest_commit_metadata">get_latest_commit_metadata</a></li><li><a href="#method.get_latest_transaction_info_option">get_latest_transaction_info_option</a></li><li><a href="#method.get_latest_version">get_latest_version</a></li></ul><h3><a href="#trait-implementations">Trait Implementations</a></h3><ul class="block"><li><a href="#impl-MoveStorage-for-%26dyn+DbReader">MoveStorage</a></li></ul><h3><a href="#implementors">Implementors</a></h3></section><h2><a href="index.html">In storage_interface</a></h2></div></nav><main><div class="width-limiter"><nav class="sub"><form class="search-form"><span></span><input class="search-input" name="search" aria-label="Run search in the documentation" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><a href="../help.html">?</a></div><div id="settings-menu" tabindex="-1"><a href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../static.files/wheel-7b819b6101059cd0.svg"></a></div></form></nav><section id="main-content" class="content"><div class="main-heading"><h1>Trait <a href="index.html">storage_interface</a>::<wbr><a class="trait" href="#">DbReader</a><button id="copy-path" title="Copy item path to clipboard"><img src="../static.files/clipboard-7571035ce49a181d.svg" width="19" height="18" alt="Copy item path"></button></h1><span class="out-of-band"><a class="srclink" href="../src/storage_interface/lib.rs.html#171-390">source</a> · <button id="toggle-all-docs" title="collapse all docs">[<span>&#x2212;</span>]</button></span></div><pre class="rust item-decl"><code>pub trait DbReader: <a class="trait" href="https://doc.rust-lang.org/1.69.0/core/marker/trait.Send.html" title="trait core::marker::Send">Send</a> + <a class="trait" href="https://doc.rust-lang.org/1.69.0/core/marker/trait.Sync.html" title="trait core::marker::Sync">Sync</a> {
+<details class="toggle type-contents-toggle"><summary class="hideme"><span>Show 25 methods</span></summary>    // Required methods
+    fn <a href="#tymethod.get_epoch_ending_ledger_infos" class="fn">get_epoch_ending_ledger_infos</a>(
+        &amp;self,
+        start_epoch: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        end_epoch: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;EpochChangeProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_transactions" class="fn">get_transactions</a>(
+        &amp;self,
+        start_version: Version,
+        batch_size: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        ledger_version: Version,
+        fetch_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;TransactionListWithProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_events" class="fn">get_events</a>(
+        &amp;self,
+        event_key: &amp;EventKey,
+        start: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        order: <a class="enum" href="enum.Order.html" title="enum storage_interface::Order">Order</a>,
+        limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;(<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>, ContractEvent)&gt;&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_events_with_proofs" class="fn">get_events_with_proofs</a>(
+        &amp;self,
+        event_key: &amp;EventKey,
+        start: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        order: <a class="enum" href="enum.Order.html" title="enum storage_interface::Order">Order</a>,
+        limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        known_version: <a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>&gt;
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;EventWithProof&gt;&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_block_timestamp" class="fn">get_block_timestamp</a>(&amp;self, version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_event_by_version_with_proof" class="fn">get_event_by_version_with_proof</a>(
+        &amp;self,
+        event_key: &amp;EventKey,
+        event_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        proof_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;EventByVersionWithProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_latest_account_state" class="fn">get_latest_account_state</a>(
+        &amp;self,
+        address: AccountAddress
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountStateBlob&gt;&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_latest_ledger_info" class="fn">get_latest_ledger_info</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;LedgerInfoWithSignatures&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_startup_info" class="fn">get_startup_info</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="struct.StartupInfo.html" title="struct storage_interface::StartupInfo">StartupInfo</a>&gt;&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_account_transaction" class="fn">get_account_transaction</a>(
+        &amp;self,
+        address: AccountAddress,
+        seq_num: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        include_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>,
+        ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;TransactionWithProof&gt;&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_account_transactions" class="fn">get_account_transactions</a>(
+        &amp;self,
+        address: AccountAddress,
+        seq_num: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        include_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>,
+        ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccountTransactionsWithProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_state_proof_with_ledger_info" class="fn">get_state_proof_with_ledger_info</a>(
+        &amp;self,
+        known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        ledger_info: LedgerInfoWithSignatures
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;StateProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_state_proof" class="fn">get_state_proof</a>(&amp;self, known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;StateProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_account_state_with_proof" class="fn">get_account_state_with_proof</a>(
+        &amp;self,
+        address: AccountAddress,
+        version: Version,
+        ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccountStateWithProof&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_account_state_with_proof_by_version" class="fn">get_account_state_with_proof_by_version</a>(
+        &amp;self,
+        address: AccountAddress,
+        version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountStateBlob&gt;, SparseMerkleProof&lt;AccountStateBlob&gt;)&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_latest_state_root" class="fn">get_latest_state_root</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(Version, HashValue)&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_latest_tree_state" class="fn">get_latest_tree_state</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="struct.TreeState.html" title="struct storage_interface::TreeState">TreeState</a>&gt;;
+<span class="item-spacer"></span>    fn <a href="#tymethod.get_epoch_ending_ledger_info" class="fn">get_epoch_ending_ledger_info</a>(
+        &amp;self,
+        known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;LedgerInfoWithSignatures&gt;;
+
+    // Provided methods
+    fn <a href="#method.get_last_version_before_timestamp" class="fn">get_last_version_before_timestamp</a>(
+        &amp;self,
+        _timestamp: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+        _ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Version&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_latest_version" class="fn">get_latest_version</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Version&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_latest_commit_metadata" class="fn">get_latest_commit_metadata</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(Version, <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>)&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_latest_transaction_info_option" class="fn">get_latest_transaction_info_option</a>(
+        &amp;self
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;(Version, TransactionInfo)&gt;&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_accumulator_root_hash" class="fn">get_accumulator_root_hash</a>(&amp;self, _version: Version) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;HashValue&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_accumulator_consistency_proof" class="fn">get_accumulator_consistency_proof</a>(
+        &amp;self,
+        _client_known_version: <a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Version&gt;,
+        _ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccumulatorConsistencyProof&gt; { ... }
+<span class="item-spacer"></span>    fn <a href="#method.get_accumulator_summary" class="fn">get_accumulator_summary</a>(
+        &amp;self,
+        ledger_version: Version
+    ) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;TransactionAccumulatorSummary&gt; { ... }
+</details>}</code></pre><details class="toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><p>Trait that is implemented by a DB that supports certain public (to client) read APIs
+expected of a Diem DB</p>
+</div></details><h2 id="required-methods" class="small-section-header">Required Methods<a href="#required-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="tymethod.get_epoch_ending_ledger_infos" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#176-180">source</a><h4 class="code-header">fn <a href="#tymethod.get_epoch_ending_ledger_infos" class="fn">get_epoch_ending_ledger_infos</a>(
+    &amp;self,
+    start_epoch: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    end_epoch: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;EpochChangeProof&gt;</h4></section></summary><div class="docblock"><p>See <a href="../diemdb/struct.DiemDB.html#method.get_epoch_ending_ledger_infos"><code>DiemDB::get_epoch_ending_ledger_infos</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_transactions" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#185-191">source</a><h4 class="code-header">fn <a href="#tymethod.get_transactions" class="fn">get_transactions</a>(
+    &amp;self,
+    start_version: Version,
+    batch_size: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    ledger_version: Version,
+    fetch_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;TransactionListWithProof&gt;</h4></section></summary><div class="docblock"><p>See <a href="../diemdb/struct.DiemDB.html#method.get_transactions"><code>DiemDB::get_transactions</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_events" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#194-200">source</a><h4 class="code-header">fn <a href="#tymethod.get_events" class="fn">get_events</a>(
+    &amp;self,
+    event_key: &amp;EventKey,
+    start: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    order: <a class="enum" href="enum.Order.html" title="enum storage_interface::Order">Order</a>,
+    limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;(<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>, ContractEvent)&gt;&gt;</h4></section></summary><div class="docblock"><p>Returns events by given event key</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_events_with_proofs" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#203-210">source</a><h4 class="code-header">fn <a href="#tymethod.get_events_with_proofs" class="fn">get_events_with_proofs</a>(
+    &amp;self,
+    event_key: &amp;EventKey,
+    start: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    order: <a class="enum" href="enum.Order.html" title="enum storage_interface::Order">Order</a>,
+    limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    known_version: <a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>&gt;
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;EventWithProof&gt;&gt;</h4></section></summary><div class="docblock"><p>Returns events by given event key</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_block_timestamp" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#216">source</a><h4 class="code-header">fn <a href="#tymethod.get_block_timestamp" class="fn">get_block_timestamp</a>(&amp;self, version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>&gt;</h4></section></summary><div class="docblock"><p>See <a href="../diemdb/struct.DiemDB.html#method.get_block_timestamp"><code>DiemDB::get_block_timestamp</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_event_by_version_with_proof" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#220-225">source</a><h4 class="code-header">fn <a href="#tymethod.get_event_by_version_with_proof" class="fn">get_event_by_version_with_proof</a>(
+    &amp;self,
+    event_key: &amp;EventKey,
+    event_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    proof_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;EventByVersionWithProof&gt;</h4></section></summary><div class="docblock"><p>Returns the [<code>NewBlockEvent</code>] for the block containing the requested
+<code>version</code> and proof that the block actually contains the <code>version</code>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_latest_account_state" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#242-243">source</a><h4 class="code-header">fn <a href="#tymethod.get_latest_account_state" class="fn">get_latest_account_state</a>(
+    &amp;self,
+    address: AccountAddress
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountStateBlob&gt;&gt;</h4></section></summary><div class="docblock"><p>See <a href="../diemdb/struct.DiemDB.html#method.get_latest_account_state"><code>DiemDB::get_latest_account_state</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_latest_ledger_info" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#246">source</a><h4 class="code-header">fn <a href="#tymethod.get_latest_ledger_info" class="fn">get_latest_ledger_info</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;LedgerInfoWithSignatures&gt;</h4></section></summary><div class="docblock"><p>Returns the latest ledger info.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_startup_info" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#265">source</a><h4 class="code-header">fn <a href="#tymethod.get_startup_info" class="fn">get_startup_info</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="struct.StartupInfo.html" title="struct storage_interface::StartupInfo">StartupInfo</a>&gt;&gt;</h4></section></summary><div class="docblock"><p>Gets information needed from storage during the main node startup.
+See <a href="../diemdb/struct.DiemDB.html#method.get_startup_info"><code>DiemDB::get_startup_info</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_account_transaction" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#269-275">source</a><h4 class="code-header">fn <a href="#tymethod.get_account_transaction" class="fn">get_account_transaction</a>(
+    &amp;self,
+    address: AccountAddress,
+    seq_num: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    include_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>,
+    ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;TransactionWithProof&gt;&gt;</h4></section></summary><div class="docblock"><p>Returns a transaction that is the <code>seq_num</code>-th one associated with the given account. If
+the transaction with given <code>seq_num</code> doesn’t exist, returns <code>None</code>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_account_transactions" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#281-288">source</a><h4 class="code-header">fn <a href="#tymethod.get_account_transactions" class="fn">get_account_transactions</a>(
+    &amp;self,
+    address: AccountAddress,
+    seq_num: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    limit: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    include_events: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.bool.html">bool</a>,
+    ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccountTransactionsWithProof&gt;</h4></section></summary><div class="docblock"><p>Returns the list of transactions sent by an account with <code>address</code> starting
+at sequence number <code>seq_num</code>. Will return no more than <code>limit</code> transactions.
+Will ignore transactions with <code>txn.version &gt; ledger_version</code>. Optionally
+fetch events for each transaction when <code>fetch_events</code> is <code>true</code>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_state_proof_with_ledger_info" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#292-296">source</a><h4 class="code-header">fn <a href="#tymethod.get_state_proof_with_ledger_info" class="fn">get_state_proof_with_ledger_info</a>(
+    &amp;self,
+    known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    ledger_info: LedgerInfoWithSignatures
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;StateProof&gt;</h4></section></summary><div class="docblock"><p>Returns proof of new state for a given ledger info with signatures relative to version known
+to client</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_state_proof" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#299">source</a><h4 class="code-header">fn <a href="#tymethod.get_state_proof" class="fn">get_state_proof</a>(&amp;self, known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;StateProof&gt;</h4></section></summary><div class="docblock"><p>Returns proof of new state relative to version known to client</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_account_state_with_proof" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#303-308">source</a><h4 class="code-header">fn <a href="#tymethod.get_account_state_with_proof" class="fn">get_account_state_with_proof</a>(
+    &amp;self,
+    address: AccountAddress,
+    version: Version,
+    ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccountStateWithProof&gt;</h4></section></summary><div class="docblock"><p>Returns the account state corresponding to the given version and account address with proof
+based on <code>ledger_version</code></p>
+</div></details><section id="tymethod.get_account_state_with_proof_by_version" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#318-325">source</a><h4 class="code-header">fn <a href="#tymethod.get_account_state_with_proof_by_version" class="fn">get_account_state_with_proof_by_version</a>(
+    &amp;self,
+    address: AccountAddress,
+    version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;AccountStateBlob&gt;, SparseMerkleProof&lt;AccountStateBlob&gt;)&gt;</h4></section><details class="toggle method-toggle" open><summary><section id="tymethod.get_latest_state_root" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#331">source</a><h4 class="code-header">fn <a href="#tymethod.get_latest_state_root" class="fn">get_latest_state_root</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(Version, HashValue)&gt;</h4></section></summary><div class="docblock"><p>See <a href="../diemdb/struct.DiemDB.html#method.get_latest_state_root"><code>DiemDB::get_latest_state_root</code></a>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_latest_tree_state" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#335">source</a><h4 class="code-header">fn <a href="#tymethod.get_latest_tree_state" class="fn">get_latest_tree_state</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="struct.TreeState.html" title="struct storage_interface::TreeState">TreeState</a>&gt;</h4></section></summary><div class="docblock"><p>Gets the latest TreeState no matter if db has been bootstrapped.
+Used by the Db-bootstrapper.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="tymethod.get_epoch_ending_ledger_info" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#338">source</a><h4 class="code-header">fn <a href="#tymethod.get_epoch_ending_ledger_info" class="fn">get_epoch_ending_ledger_info</a>(
+    &amp;self,
+    known_version: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;LedgerInfoWithSignatures&gt;</h4></section></summary><div class="docblock"><p>Get the ledger info of the epoch that <code>known_version</code> belongs to.</p>
+</div></details></div><h2 id="provided-methods" class="small-section-header">Provided Methods<a href="#provided-methods" class="anchor">§</a></h2><div class="methods"><details class="toggle method-toggle" open><summary><section id="method.get_last_version_before_timestamp" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#230-236">source</a><h4 class="code-header">fn <a href="#method.get_last_version_before_timestamp" class="fn">get_last_version_before_timestamp</a>(
+    &amp;self,
+    _timestamp: <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>,
+    _ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Version&gt;</h4></section></summary><div class="docblock"><p>Gets the version of the last transaction committed before timestamp,
+a commited block at or after the required timestamp must exist (otherwise it’s possible
+the next block committed as a timestamp smaller than the one in the request).</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_latest_version" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#249-251">source</a><h4 class="code-header">fn <a href="#method.get_latest_version" class="fn">get_latest_version</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;Version&gt;</h4></section></summary><div class="docblock"><p>Returns the latest ledger info.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_latest_commit_metadata" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#254-258">source</a><h4 class="code-header">fn <a href="#method.get_latest_commit_metadata" class="fn">get_latest_commit_metadata</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;(Version, <a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>)&gt;</h4></section></summary><div class="docblock"><p>Returns the latest version and committed block timestamp</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_latest_transaction_info_option" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#343-345">source</a><h4 class="code-header">fn <a href="#method.get_latest_transaction_info_option" class="fn">get_latest_transaction_info_option</a>(
+    &amp;self
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;(Version, TransactionInfo)&gt;&gt;</h4></section></summary><div class="docblock"><p>Gets the latest transaction info.
+N.B. Unlike get_startup_info(), even if the db is not bootstrapped, this can return <code>Some</code>
+– those from a db-restore run.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_accumulator_root_hash" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#349-351">source</a><h4 class="code-header">fn <a href="#method.get_accumulator_root_hash" class="fn">get_accumulator_root_hash</a>(&amp;self, _version: Version) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;HashValue&gt;</h4></section></summary><div class="docblock"><p>Gets the transaction accumulator root hash at specified version.
+Caller must guarantee the version is not greater than the latest version.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_accumulator_consistency_proof" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#366-372">source</a><h4 class="code-header">fn <a href="#method.get_accumulator_consistency_proof" class="fn">get_accumulator_consistency_proof</a>(
+    &amp;self,
+    _client_known_version: <a class="enum" href="https://doc.rust-lang.org/1.69.0/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;Version&gt;,
+    _ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;AccumulatorConsistencyProof&gt;</h4></section></summary><div class="docblock"><p>Gets an [<code>AccumulatorConsistencyProof</code>] starting from <code>client_known_version</code>
+(or pre-genesis if <code>None</code>) until <code>ledger_version</code>.</p>
+<p>In other words, if the client has an accumulator summary for
+<code>client_known_version</code>, they can use the result from this API to efficiently
+extend their accumulator to <code>ledger_version</code> and prove that the new accumulator
+is consistent with their old accumulator. By consistent, we mean that by
+appending the actual <code>ledger_version - client_known_version</code> transactions
+to the old accumulator summary you get the new accumulator summary.</p>
+<p>If the client is starting up for the first time and has no accumulator
+summary yet, they can call this with <code>client_known_version=None</code>, i.e.,
+pre-genesis, to get the complete accumulator summary up to <code>ledger_version</code>.</p>
+</div></details><details class="toggle method-toggle" open><summary><section id="method.get_accumulator_summary" class="method"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#379-389">source</a><h4 class="code-header">fn <a href="#method.get_accumulator_summary" class="fn">get_accumulator_summary</a>(
+    &amp;self,
+    ledger_version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;TransactionAccumulatorSummary&gt;</h4></section></summary><div class="docblock"><p>A convenience function for building a [<code>TransactionAccumulatorSummary</code>]
+at the given <code>ledger_version</code>.</p>
+<p>Note: this is roughly equivalent to calling
+<code>DbReader::get_accumulator_consistency_proof(None, ledger_version)</code>.</p>
+</div></details></div><h2 id="trait-implementations" class="small-section-header">Trait Implementations<a href="#trait-implementations" class="anchor">§</a></h2><div id="trait-implementations-list"><details class="toggle implementors-toggle" open><summary><section id="impl-MoveStorage-for-%26dyn+DbReader" class="impl"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#392-451">source</a><a href="#impl-MoveStorage-for-%26dyn+DbReader" class="anchor">§</a><h3 class="code-header">impl MoveStorage for &amp;dyn <a class="trait" href="trait.DbReader.html" title="trait storage_interface::DbReader">DbReader</a></h3></section></summary><div class="impl-items"><details class="toggle method-toggle" open><summary><section id="method.batch_fetch_resources" class="method trait-impl"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#393-395">source</a><a href="#method.batch_fetch_resources" class="anchor">§</a><h4 class="code-header">fn <a class="fn">batch_fetch_resources</a>(
+    &amp;self,
+    access_paths: <a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;AccessPath&gt;
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u8.html">u8</a>&gt;&gt;&gt;</h4></section></summary><div class='docblock'>Returns a vector of Move resources as serialized byte array
+Order of resources returned matches the order of <code>access_path</code></div></details><details class="toggle method-toggle" open><summary><section id="method.batch_fetch_resources_by_version" class="method trait-impl"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#397-437">source</a><a href="#method.batch_fetch_resources_by_version" class="anchor">§</a><h4 class="code-header">fn <a class="fn">batch_fetch_resources_by_version</a>(
+    &amp;self,
+    access_paths: <a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;AccessPath&gt;,
+    version: Version
+) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="https://doc.rust-lang.org/1.69.0/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u8.html">u8</a>&gt;&gt;&gt;</h4></section></summary><div class='docblock'>Returns a vector of Move resources as serialized byte array from a
+specified version of the database
+Order of resources returned matches the order of <code>access_path</code></div></details><details class="toggle method-toggle" open><summary><section id="method.fetch_synced_version" class="method trait-impl"><a class="srclink rightside" href="../src/storage_interface/lib.rs.html#439-450">source</a><a href="#method.fetch_synced_version" class="anchor">§</a><h4 class="code-header">fn <a class="fn">fetch_synced_version</a>(&amp;self) -&gt; <a class="type" href="https://docs.rs/anyhow/1.0.69/anyhow/type.Result.html" title="type anyhow::Result">Result</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/1.69.0/std/primitive.u64.html">u64</a>&gt;</h4></section></summary><div class='docblock'>Get the version on the latest transaction info.</div></details></div></details></div><h2 id="implementors" class="small-section-header">Implementors<a href="#implementors" class="anchor">§</a></h2><div id="implementors-list"><section id="impl-DbReader-for-MockDbReader" class="impl"><a class="srclink rightside" href="../src/storage_interface/mock.rs.html#30-168">source</a><a href="#impl-DbReader-for-MockDbReader" class="anchor">§</a><h3 class="code-header">impl <a class="trait" href="trait.DbReader.html" title="trait storage_interface::DbReader">DbReader</a> for <a class="struct" href="mock/struct.MockDbReader.html" title="struct storage_interface::mock::MockDbReader">MockDbReader</a></h3></section></div><script src="../implementors/storage_interface/trait.DbReader.js" async></script></section></div></main><div id="rustdoc-vars" data-root-path="../" data-static-root-path="../static.files/" data-current-crate="storage_interface" data-themes="" data-resource-suffix="" data-rustdoc-version="1.69.0 (84c898d65 2023-04-16)" data-search-js="search-8a59a8356673ec1f.js" data-settings-js="settings-f0c5c39777a9a2f6.js" data-settings-css="settings-0bcba95ff279c1db.css" ></div></body></html>

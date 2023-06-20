@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":["DEFAULT_BUILD_DIR","DEFAULT_DEP_MODE","DEFAULT_PACKAGE_DIR","DEFAULT_SOURCE_DIR","DEFAULT_STORAGE_DIR"],"enum":["Command","ConcretizeMode","ExperimentalCommand","GenerateCommand","SandboxCommand"],"fn":["move_cli","run_cli"],"mod":["base","experimental","sandbox"],"struct":["Move","MoveCLI","StructLayoutOptions"]};

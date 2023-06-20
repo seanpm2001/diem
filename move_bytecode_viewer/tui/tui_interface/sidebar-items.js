@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["start_tui_with_interface"],"struct":["DebugInterface","TUIOutput"],"trait":["TUIInterface"]};

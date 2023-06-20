@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"enum":["HumanReadablePrefix","IntentIdentifierError"],"struct":["Intent"]};

@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"mod":["commit_decision","commit_vote"]};
